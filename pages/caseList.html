@@ -53,69 +53,7 @@
 <section class="cat-area section-gap" id="service" style="min-height: 85vh">
   <div class="container">
     <div class="row" id="cases-block">
-      <div class="col-lg-4">
-        <div class="single-cat d-flex flex-column">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mb-20" style="margin-top: 23px;">Maintenance</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Residential Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Commercial Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Commercial Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Commercial Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Commercial Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat">
-          <a href="#" class="mx-auto d-block">
-            <img src="img/about.webp" class="img-fluid">
-          </a>
-          <h4 class="mt-40 mb-20">Commercial Service</h4>
-          <p>Inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace.</p>
-        </div>
-      </div>
+      <!-- Dynamic Content Here -->
     </div>
   </div>
 </section>
@@ -165,3 +103,70 @@
 
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const data = [
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+      {
+        image: "img/about.webp",
+        title: "Maintenance",
+        description: "Inappropriate behavior is often laughed off as \"boys will be boys,\" women face higher conduct standards especially in the workplace.",
+        link: "#"
+      },
+    ];
+
+    const casesBlock = document.getElementById("cases-block");
+
+    data.forEach(item => {
+      const col = document.createElement("div");
+      col.className = "col-lg-4";
+
+      col.innerHTML = `
+      <div class="single-cat d-flex flex-column">
+        <a href="${item.link}" class="mx-auto d-block">
+          <img src="${item.image}" class="img-fluid">
+        </a>
+        <h4 class="mb-20" style="margin-top: 23px;">${item.title}</h4>
+        <p>${item.description}</p>
+      </div>
+    `;
+
+      casesBlock.appendChild(col);
+    });
+  });
+</script>
